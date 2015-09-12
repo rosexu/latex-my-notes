@@ -1,0 +1,25 @@
+.title {
+    text-align: center;
+}
+
+.tabs {
+    margin-top: 100px;
+}
+
+.form-control.search-bar {
+    height: 60px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.search-button {
+    height: 60px;
+    width: 60px;
+}
+.input-group-btn {
+    padding: 0 !important;
+}
+
+.search {
+    margin-top: 50px;
+}

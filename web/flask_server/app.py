@@ -1,16 +1,17 @@
 import logging
 import os
 from logging import Formatter, FileHandler
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from ocr import process_image
 
 
 app = Flask(__name__)
 _VERSION = 1
 
+
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template("layout.html")
 
 
 @app.route('/v{}/ocr'.format(_VERSION), methods=["POST"])
@@ -28,16 +29,25 @@ def ocr():
         )
 
 
-@app.errorhandler(500)
-def internal_error(error):
-    print str(error)
-    return 'ok'
-
-
-@app.errorhandler(404)
-def not_found_error(error):
-    print str(error)
-    return 'ok'
+# @app.errorhandler(500)
+# def internal_error(error):
+#     print str(error)
+#     return 'ok'
+#
+#
+# @app.errorhandler(404)
+# def not_found_error(error):
+#     print str(error)
+#     return 'ok'@app.errorhandler(500)
+# def internal_error(error):
+#     print str(error)
+#     return 'ok'
+#
+#
+# @app.errorhandler(404)
+# def not_found_error(error):
+#     print str(error)
+#     return 'ok'
 
 if not app.debug:
     file_handler = FileHandler('error.log')

@@ -1,0 +1,40 @@
+<!doctype html>
+
+<title>Latex My Notes</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mandatory.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="../static/js/libs/jquery-1.10.2.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<div class=page>
+    <div class="title">
+        <h1>Latex My Notes</h1>
+    </div>
+    <div class="row search"></div>
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="input-group">
+          <input type="text" class="form-control search-bar" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default search-button" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <div class="row tabs">
+        <div class="col-lg-10 col-lg-offset-1">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">All</a></li>
+                <li role="presentation"><a href="#">Lists</a></li>
+                <li role="presentation"><a href="#">School Notes</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="results col-lg-10 col-lg-offset-1"></div>
+    </div>
+</div>

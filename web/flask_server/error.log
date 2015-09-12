@@ -188,3 +188,333 @@ ValueError: View function did not return a response
 2015-09-12 03:43:48,790 INFO:             errors [in app.py:20]
 2015-09-12 03:45:05,120 INFO:             errors [in app.py:20]
 2015-09-12 03:46:16,136 INFO:             errors [in app.py:51]
+2015-09-12 14:33:42,989 INFO:             errors [in app.py:51]
+2015-09-12 14:35:02,763 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+NameError: global name 'render_template' is not defined
+2015-09-12 14:37:01,006 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+NameError: global name 'render_template' is not defined
+2015-09-12 14:37:09,118 INFO:             errors [in app.py:51]
+2015-09-12 14:37:12,064 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: layout.html
+2015-09-12 14:38:09,853 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("../../templates/layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: layout.html
+2015-09-12 14:38:17,176 INFO:             errors [in app.py:51]
+2015-09-12 14:38:18,608 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("../../templates/layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: ../../templates/layout.html
+2015-09-12 14:40:40,826 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("../../templates/layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: ../../templates/layout.html
+2015-09-12 14:40:58,924 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: ../../templates/layout.html
+2015-09-12 14:41:06,002 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: ../../templates/layout.html
+2015-09-12 14:41:20,583 INFO:             errors [in app.py:51]
+2015-09-12 14:41:24,243 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/flask_server/templates/layout.html", line 8, in top-level template code
+    <a href="{{ url_for('login') }}">log in</a>
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/werkzeug/routing.py", line 1620, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('login', {}, None)
+2015-09-12 14:41:38,999 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/flask_server/templates/layout.html", line 8, in top-level template code
+    <a href="{{ url_for('login') }}">log in</a>
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/werkzeug/routing.py", line 1620, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('login', {}, None)
+2015-09-12 14:44:25,393 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 13, in hello
+    def hello():
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/flask_server/templates/layout.html", line 8, in top-level template code
+    <a href="{{ url_for('login') }}">log in</a>
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/werkzeug/routing.py", line 1620, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('login', {}, None)
+2015-09-12 14:44:33,131 INFO:             errors [in app.py:61]
+2015-09-12 14:44:34,911 ERROR:             Exception on / [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 14, in hello
+    return render_template("layout.html")
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/flask_server/templates/layout.html", line 8, in top-level template code
+    <a href="{{ url_for('login') }}">log in</a>
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/werkzeug/routing.py", line 1620, in build
+    raise BuildError(endpoint, values, method)
+BuildError: ('login', {}, None)
+2015-09-12 15:14:54,886 INFO:             errors [in app.py:61]
