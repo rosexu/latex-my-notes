@@ -7,9 +7,10 @@ from StringIO import StringIO
 
 def process_image(url):
     image = _get_image(url)
+    print image
     image.filter(ImageFilter.SHARPEN)
     return pytesseract.image_to_string(image)
 
 
 def _get_image(url):
-    return Image.open(StringIO(requests.get(url).content))
+    return Image.open('test.jpg')

@@ -518,3 +518,26 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method)
 BuildError: ('login', {}, None)
 2015-09-12 15:14:54,886 INFO:             errors [in app.py:61]
+2015-09-12 16:14:10,743 INFO:             errors [in app.py:61]
+2015-09-12 16:16:04,423 INFO:             errors [in app.py:63]
+2015-09-12 16:22:11,848 INFO:             errors [in app.py:63]
+2015-09-12 16:25:38,121 INFO:             errors [in app.py:63]
+2015-09-12 16:28:41,328 INFO:             errors [in app.py:63]
+2015-09-12 16:30:15,931 INFO:             errors [in app.py:63]
+2015-09-12 16:38:33,495 INFO:             errors [in app.py:63]
+2015-09-12 16:38:59,964 INFO:             errors [in app.py:63]
+2015-09-12 16:40:11,134 INFO:             errors [in app.py:63]
+2015-09-12 16:43:18,375 INFO:             errors [in app.py:65]
+2015-09-12 16:43:24,347 ERROR:             Exception on /v1/ocr [POST] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1478, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1566, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2015-09-12 16:45:07,294 INFO:             errors [in app.py:68]
+2015-09-12 16:45:44,362 INFO:             errors [in app.py:68]
+2015-09-12 16:49:45,119 INFO:             errors [in app.py:68]
+2015-09-12 17:56:22,366 INFO:             errors [in app.py:68]

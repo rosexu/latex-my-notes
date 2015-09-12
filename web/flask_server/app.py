@@ -1,4 +1,5 @@
 import logging
+import sys
 import os
 from logging import Formatter, FileHandler
 from flask import Flask, request, jsonify, render_template
@@ -23,7 +24,13 @@ def ocr():
             return jsonify({"output": output})
         else:
             return jsonify({"error": "only .jpg files, please"})
+    except IOError as e:
+        print e
+        return jsonify(
+            {"error": "IO PROBLEMS"}
+        )
     except:
+        print "Unexpected error:", sys.exc_info()[1]
         return jsonify(
             {"error": "Did you mean to send: {'image_url': 'some_jpeg_url'}"}
         )
