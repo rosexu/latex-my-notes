@@ -3,7 +3,10 @@ import sys
 import os
 import subprocess
 from logging import Formatter, FileHandler
-from flask import Flask, request, jsonify, render_template
+import gridfs
+import pymongo
+from pymongo import MongoClient, TEXT
+from flask import Flask, request, jsonify, render_template, redirect
 from ocr import process_image
 
 
@@ -66,16 +69,40 @@ def toTex():
 
 def tex(title, bdy):
     latexFile = render_template("general.tex", title=title, body=bdy)
-    with open("temp.tex", "wb") as fh:
+    titleNoSpace=title.replace(' ', '')
+    fileDir = "static/static/"
+    latexFileName = titleNoSpace + ".tex"
+    latexFileWithDir = fileDir + latexFileName
+    with open(latexFileWithDir, "wb") as fh:
         fh.write(latexFile)
-    failure = subprocess.call(['pdflatex', 'temp.tex'], shell=False)
+    failure = subprocess.call(['pdflatex', '-interaction=nonstopmode', latexFileWithDir], shell=False)
+    os.rename(titleNoSpace + ".pdf", fileDir + titleNoSpace + ".pdf")
+    addToDB(titleNoSpace, bdy)
     if (not failure):
-        os.remove("temp.tex")
-        os.remove("temp.log")
-        os.remove("temp.aux")
+        os.remove(latexFileName)
+        os.remove(titleNoSpace + ".log")
+        os.remove(titleNoSpace + ".aux")
         return "yay"
     else:
         return "no"
+
+
+def addToDB(title, data):
+    collection = db['test-collection']
+    post = {"author": "Rose",
+            "title": title,
+            "data": data}
+    collection.insert_one(post)
+    collection.create_index([('data', TEXT)], default_language='english')
+    return "ok"
+
+
+@app.route('/get-my-pdf')
+def redirectToPDF():
+    fileName = request.args['fileName']
+    fileDir = "static/static/"
+
+    return redirect(fileDir + fileName + ".pdf")
 
 
 # @app.errorhandler(500)
@@ -97,6 +124,9 @@ def tex(title, bdy):
 # def not_found_error(error):
 #     print str(error)
 #     return 'ok'
+
+client = MongoClient('mongodb://rose:admin@ds041571.mongolab.com:41571/latex-my-notes')
+db = client['latex-my-notes']
 
 if not app.debug:
     file_handler = FileHandler('error.log')
