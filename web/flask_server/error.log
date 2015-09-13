@@ -541,3 +541,76 @@ ValueError: View function did not return a response
 2015-09-12 16:45:44,362 INFO:             errors [in app.py:68]
 2015-09-12 16:49:45,119 INFO:             errors [in app.py:68]
 2015-09-12 17:56:22,366 INFO:             errors [in app.py:68]
+2015-09-12 20:40:51,236 INFO:             errors [in app.py:68]
+2015-09-12 21:11:02,934 INFO:             errors [in app.py:72]
+2015-09-12 21:11:04,638 ERROR:             Exception on /get-tex [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1478, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1566, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2015-09-12 21:12:17,337 ERROR:             Exception on /get-tex [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1478, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1566, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2015-09-12 21:12:26,999 INFO:             errors [in app.py:72]
+2015-09-12 21:12:28,940 ERROR:             Exception on /get-tex [GET] [in /Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1478, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/Users/rosexu/PycharmProjects/latex-my-notes/web/webenv/lib/python2.7/site-packages/flask/app.py", line 1566, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2015-09-12 21:18:10,254 INFO:             errors [in app.py:72]
+2015-09-12 21:18:10,432 INFO:             errors [in app.py:72]
+2015-09-12 21:20:40,328 INFO:             errors [in app.py:72]
+2015-09-12 21:27:41,381 INFO:             errors [in app.py:74]
+2015-09-12 21:34:23,267 INFO:             errors [in app.py:78]
+2015-09-12 21:38:58,861 INFO:             errors [in app.py:80]
+2015-09-12 21:38:59,096 INFO:             errors [in app.py:80]
+2015-09-12 21:43:29,312 INFO:             errors [in app.py:80]
+2015-09-12 21:43:29,516 INFO:             errors [in app.py:80]
+2015-09-12 21:48:43,606 INFO:             errors [in app.py:81]
+2015-09-12 21:49:35,003 INFO:             errors [in app.py:81]
+2015-09-12 21:49:35,236 INFO:             errors [in app.py:81]
+2015-09-12 21:49:51,822 INFO:             errors [in app.py:81]
+2015-09-12 21:51:27,204 INFO:             errors [in app.py:81]
+2015-09-12 21:53:13,599 INFO:             errors [in app.py:83]
+2015-09-12 23:21:25,022 INFO:             errors [in app.py:94]
+2015-09-12 23:21:25,282 INFO:             errors [in app.py:94]
+2015-09-12 23:23:11,709 INFO:             errors [in app.py:94]
+2015-09-12 23:29:02,154 INFO:             errors [in app.py:95]
+2015-09-12 23:29:11,733 INFO:             errors [in app.py:95]
+2015-09-12 23:29:46,604 INFO:             errors [in app.py:95]
+2015-09-12 23:30:22,488 INFO:             errors [in app.py:95]
+2015-09-12 23:34:18,014 INFO:             errors [in app.py:96]
+2015-09-12 23:38:22,754 INFO:             errors [in app.py:96]
+2015-09-12 23:40:18,390 INFO:             errors [in app.py:99]
+2015-09-12 23:43:56,793 INFO:             errors [in app.py:99]
+2015-09-12 23:44:13,419 INFO:             errors [in app.py:99]
+2015-09-12 23:44:19,932 INFO:             errors [in app.py:99]
+2015-09-12 23:47:16,006 INFO:             errors [in app.py:99]
+2015-09-12 23:47:19,286 INFO:             errors [in app.py:100]
+2015-09-12 23:49:52,390 INFO:             errors [in app.py:100]
+2015-09-12 23:49:52,607 INFO:             errors [in app.py:100]
+2015-09-12 23:52:21,364 INFO:             errors [in app.py:99]
+2015-09-12 23:57:24,203 INFO:             errors [in app.py:99]
+2015-09-12 23:57:24,427 INFO:             errors [in app.py:99]
+2015-09-12 23:58:10,648 INFO:             errors [in app.py:99]
+2015-09-12 23:58:10,846 INFO:             errors [in app.py:99]
+2015-09-12 23:58:56,609 INFO:             errors [in app.py:99]
+2015-09-12 23:58:56,841 INFO:             errors [in app.py:99]
+2015-09-12 23:59:18,376 INFO:             errors [in app.py:99]
+2015-09-12 23:59:18,546 INFO:             errors [in app.py:99]
+2015-09-12 23:59:39,460 INFO:             errors [in app.py:99]
+2015-09-12 23:59:39,629 INFO:             errors [in app.py:99]
