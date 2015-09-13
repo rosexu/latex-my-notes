@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8144398-0fe2-4c0c-917b-b0935be019d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/flask_server/Procfile" afterPath="$PROJECT_DIR$/web/flask_server/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/flask_server/abc.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/flask_server/app.py" afterPath="$PROJECT_DIR$/web/flask_server/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/flask_server/error.log" afterPath="$PROJECT_DIR$/web/flask_server/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/flask_server/templates/general.tex" afterPath="$PROJECT_DIR$/web/flask_server/templates/general.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/flask_server/ocr.py" afterPath="$PROJECT_DIR$/web/flask_server/ocr.py" />
     </list>
     <ignored path="latex-my-notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,15 +31,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/flask_server/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.1036036">
-              <caret line="47" column="22" selection-start-line="46" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.log" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/flask_server/error.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3327869">
+              <caret line="409" column="37" selection-start-line="409" selection-start-column="36" selection-end-line="409" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -70,8 +81,9 @@
       <list>
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/web/flask_server/Procfile" />
-        <option value="$PROJECT_DIR$/web/flask_server/app.py" />
         <option value="$PROJECT_DIR$/web/flask_server/templates/general.tex" />
+        <option value="$PROJECT_DIR$/web/flask_server/app.py" />
+        <option value="$PROJECT_DIR$/web/flask_server/error.log" />
       </list>
     </option>
   </component>
@@ -489,12 +501,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/flask_server/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1036036">
-          <caret line="47" column="22" selection-start-line="46" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flask_server/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327869">
+          <caret line="409" column="37" selection-start-line="409" selection-start-column="36" selection-end-line="409" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>

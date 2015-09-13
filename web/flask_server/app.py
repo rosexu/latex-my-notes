@@ -9,11 +9,22 @@ from ocr import process_image
 
 app = Flask(__name__)
 _VERSION = 1
-
+UPLOAD_FOLDER = '../PICTURES_LATEX'
 
 @app.route("/")
 def hello():
     return render_template("layout.html")
+
+
+@app.route("/send-image", methods=["POST"])
+def sendImage():
+    print "hit hit"
+    title = request.form['title']
+    userid = request.form['userId']
+    print title
+    print userid
+    request.files['file'].save('abc.jpg')
+    return "send image endpoint hit"
 
 
 @app.route('/v{}/ocr'.format(_VERSION), methods=["POST"])

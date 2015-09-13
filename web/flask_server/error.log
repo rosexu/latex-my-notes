@@ -614,3 +614,48 @@ ValueError: View function did not return a response
 2015-09-12 23:59:18,546 INFO:             errors [in app.py:99]
 2015-09-12 23:59:39,460 INFO:             errors [in app.py:99]
 2015-09-12 23:59:39,629 INFO:             errors [in app.py:99]
+=======
+2015-09-12 20:19:50,275 INFO:             errors [in app.py:68]
+2015-09-12 20:27:53,907 INFO:             errors [in app.py:68]
+2015-09-12 20:44:46,510 INFO:             errors [in app.py:68]
+2015-09-12 20:59:56,238 INFO:             errors [in app.py:73]
+2015-09-12 21:07:49,930 INFO:             errors [in app.py:74]
+2015-09-12 21:37:33,313 INFO:             errors [in app.py:75]
+2015-09-12 21:50:52,558 INFO:             errors [in app.py:77]
+2015-09-12 21:54:06,697 INFO:             errors [in app.py:77]
+2015-09-12 21:54:09,392 ERROR:             Exception on /send-image [POST] [in /usr/local/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 23, in sendImage
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+NameError: global name 'filename' is not defined
+2015-09-12 21:54:16,579 ERROR:             Exception on /send-image [POST] [in /usr/local/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+
+  File "app.py", line 23, in sendImage
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+NameError: global name 'filename' is not defined
+2015-09-12 21:55:36,495 INFO:             errors [in app.py:76]
+2015-09-12 21:56:33,157 INFO:             errors [in app.py:78]
+2015-09-12 21:58:05,079 INFO:             errors [in app.py:80]
+2015-09-12 22:57:25,001 INFO:             errors [in app.py:79]
+2015-09-13 00:13:47,289 INFO:             errors [in app.py:110]
