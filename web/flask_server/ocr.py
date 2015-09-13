@@ -9,6 +9,7 @@ def process_image(url):
     image = _get_image(url)
     print image
     image.filter(ImageFilter.SHARPEN)
+    print 'yay'
     return pytesseract.image_to_string(image)
 
 
