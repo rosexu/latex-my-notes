@@ -14,4 +14,4 @@ def process_image(url):
 
 
 def _get_image(url):
-    return Image.open('test.jpg')
+    return Image.open('abc.jpg')

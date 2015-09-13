@@ -1,10 +1,12 @@
 import logging
 import sys
+from bson import json_util
 import os
 import subprocess
 from logging import Formatter, FileHandler
 import gridfs
 import pymongo
+import json
 from pymongo import MongoClient, TEXT
 from flask import Flask, request, jsonify, render_template, redirect
 from ocr import process_image
@@ -27,7 +29,25 @@ def sendImage():
     print title
     print userid
     request.files['file'].save('abc.jpg')
-    return "send image endpoint hit"
+    try:
+        url = "fasfs.jpg"
+        if 'jpg' in url:
+            print 'debug'
+            output = process_image(url)
+            return toTex(title, output)
+        else:
+            return jsonify({"error": "only .jpg files, please"})
+    except IOError as e:
+        print e
+        return jsonify(
+            {"error": "IO PROBLEMS"}
+        )
+    except:
+        print "Unexpected error:", sys.exc_info()[1]
+        return jsonify(
+            {"error": "Did you mean to send: {'image_url': 'some_jpeg_url'}"}
+        )
+
 
 
 @app.route('/v{}/ocr'.format(_VERSION), methods=["POST"])
@@ -52,13 +72,27 @@ def ocr():
 
 
 def textProcessing(text):
-    return text.replace('\n', '\\')
+    result = text.replace(u"\u2018", "'").replace(u"\u2019", "'")
+    newR = result.replace('\n', '\\')
+    newNew = newR.encode('utf-8', 'replace')
+    return newNew
+
 
 
 @app.route('/get-tex', methods=["POST"])
-def toTex():
-    body = request.form['data']
-    title = "Today I win"
+def toTex(ti, bdy):
+    body = bdy
+    title = ti
+    print('beginning')
+    print(body)
+    # text = textProcessing(body)
+    # print('with replacement')
+    # print(text)
+    return tex(title, body)
+
+def toToTex(ti, bdy):
+    body = bdy.decode('utf-8').strip()
+    title = ti
     print('beginning')
     print(body)
     text = textProcessing(body)
@@ -68,7 +102,12 @@ def toTex():
 
 
 def tex(title, bdy):
-    latexFile = render_template("general.tex", title=title, body=bdy)
+    body = unicode(bdy, "utf-8")
+    print '1'
+    body = body.encode('ascii', 'ignore').decode('ascii')
+    print '2'
+    latexFile = render_template("general.tex", title=title, body=body)
+    print '3'
     titleNoSpace=title.replace(' ', '')
     fileDir = "static/static/"
     latexFileName = titleNoSpace + ".tex"
@@ -79,12 +118,13 @@ def tex(title, bdy):
     os.rename(titleNoSpace + ".pdf", fileDir + titleNoSpace + ".pdf")
     addToDB(titleNoSpace, bdy)
     if (not failure):
-        os.remove(latexFileName)
+        # os.remove(latexFileName)
         os.remove(titleNoSpace + ".log")
         os.remove(titleNoSpace + ".aux")
         return "yay"
     else:
         return "no"
+    return 'OK'
 
 
 def addToDB(title, data):
@@ -103,6 +143,27 @@ def redirectToPDF():
     fileDir = "static/static/"
 
     return redirect(fileDir + fileName + ".pdf")
+
+
+@app.route('/search')
+def search():
+    keyword = request.args['q']
+    cursor = db.command("text", "data", search=keyword)
+    print cursor
+    return 'dsaa'
+
+
+@app.route('/all')
+def getAll():
+    collection = db['test-collection']
+    arr = collection.find()
+    dic = []
+    for doc in arr:
+        print doc
+        resultObj = {'title': doc['title']}
+        dic.append(resultObj)
+    return jsonify(results=dic)
+
 
 
 # @app.errorhandler(500)
